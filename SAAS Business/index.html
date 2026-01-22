@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Into Software Sales | Interview Prep for Career Changers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto 15px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        .hero .byline {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.85;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3a8a;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .problem {
+            background: #fef3c7;
+            padding: 60px 20px;
+            border-top: 4px solid #f59e0b;
+            border-bottom: 4px solid #f59e0b;
+        }
+        
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.9;
+        }
+        
+        .problem-list li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        
+        .problem-list strong {
+            color: #92400e;
+        }
+        
+        .story {
+            background: white;
+        }
+        
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15em;
+            line-height: 1.9;
+        }
+        
+        .story-content p {
+            margin-bottom: 20px;
+        }
+        
+        .highlight-box {
+            background: #dbeafe;
+            border-left: 4px solid #1e3a8a;
+            padding: 25px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+        
+        .solution {
+            background: #f8f9fa;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-top: 4px solid #3b82f6;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+        
+        .feature-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .how-it-works {
+            background: white;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+        
+        .step p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .testimonial {
+            background: white;
+            max-width: 900px;
+            margin: 60px auto 0;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            font-size: 100px;
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            color: #dbeafe;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            font-size: 1.25em;
+            line-height: 1.8;
+            color: #333;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            margin-top: 25px;
+            font-weight: 600;
+            color: #1e3a8a;
+            font-size: 1.1em;
+        }
+        
+        .pricing {
+            background: #f8f9fa;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #1e3a8a;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
+        
+        .pricing-card .price {
+            font-size: 3em;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin: 20px 0;
+        }
+        
+        .pricing-card .price span {
+            font-size: 0.4em;
+            color: #666;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-card li:before {
+            content: '✓ ';
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .final-cta p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Land Your First Software Sales Role</h1>
+        <p class="subtitle">Even If You've Never Sold Software</p>
+        <p class="byline">AI-powered interview prep specifically designed for career changers breaking into SaaS sales</p>
+        <a href="tool.html" class="cta-button">Start Your Prep (Free)</a>
+    </div>
+    
+    <div class="problem">
+        <div class="container">
+            <h2 class="section-title">You Know You Can Succeed in Software Sales</h2>
+            <p class="section-subtitle">But every interview ends the same way...</p>
+            <ul class="problem-list">
+                <li><strong>"You don't have SaaS experience"</strong> - Even though you've crushed it in every customer-facing role you've had</li>
+                <li><strong>"Can you handle a quota?"</strong> - Even though you've consistently exceeded goals your entire career</li>
+                <li><strong>"Why sales? Why now?"</strong> - And your honest answer sounds defensive instead of confident</li>
+                <li><strong>"Tell me about your sales process"</strong> - But you don't know MEDDIC, BANT, or Sandler yet</li>
+                <li><strong>"What's your greatest weakness?"</strong> - And "lack of SaaS experience" feels like the only honest answer</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="story">
+        <div class="container">
+            <h2 class="section-title">I've Been Exactly Where You Are</h2>
+            <div class="story-content">
+                <p>Five years ago, I was managing a cycling shop. I loved the work, the people, the community. But I was working nights and weekends, missing time with my family, and hitting a ceiling on income.</p>
+                
+                <p>I knew software sales could change everything—the earning potential, the flexibility, the career trajectory. But my resume screamed "not qualified." No quota attainment. No CRM experience. No SaaS background.</p>
+                
+                <p>I applied to 50+ SDR and BDR roles. Got maybe 5 interviews. Bombed most of them.</p>
+                
+                <div class="highlight-box">
+                    Then I figured out the secret: Hiring managers don't want a sales robot. They want someone who can learn fast, handle rejection, build relationships, and show up consistently. I had all of that—I just didn't know how to talk about it.
+                </div>
+                
+                <p>I reframed my story. My cycling background became proof of resilience and discipline. My customer service experience became consultative selling. My career change became evidence of intentional decision-making and adaptability.</p>
+                
+                <p>18 months later, I was an enterprise account executive closing six-figure deals.</p>
+                
+                <p><strong>Now I help people like you do the same thing—but faster, and without the 45 failed interviews.</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="solution">
+        <div class="container">
+            <h2 class="section-title">What Makes This Different</h2>
+            <p class="section-subtitle">This isn't generic interview prep. It's built specifically for breaking into software sales.</p>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Experience Translation</h3>
+                    <p>We turn your customer service, teaching, hospitality, or retail background into sales language that hiring managers recognize and value.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Objection Handling</h3>
+                    <p>Pre-built responses to "Why sales?" "Why software?" and "Why should we take a chance on you?" that feel authentic, not scripted.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Industry Intelligence</h3>
+                    <p>Real interview questions from Salesforce, HubSpot, Gong, and other top SaaS companies—so you know exactly what's coming.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Narrative Arc</h3>
+                    <p>Your career change isn't a liability—it's your unfair advantage. We help you tell that story with confidence and clarity.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>30-60-90 Day Framework</h3>
+                    <p>Show hiring managers you've thought about ramping, learning, and contributing—even before you get the offer.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Lived Experience</h3>
+                    <p>Built by someone who made the transition, not a recruiter who's never carried a quota.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Tell Your Story</h3>
+                    <p>Our AI asks targeted questions about your background, what you're willing to work for, and what makes you different.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Analysis</h3>
+                    <p>We identify the intentional arc in your experience and translate it into sales competencies.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Your Playbook</h3>
+                    <p>Receive polished responses to the 10 most common SaaS sales interview questions, tailored to your story.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Practice & Land</h3>
+                    <p>Use your narrative to nail interviews, get offers, and start your software sales career.</p>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "I was a high school teacher trying to break into tech sales. Every interview felt like I was apologizing for my background. This tool helped me reframe teaching as the ultimate consultative selling role—understanding customer needs, handling objections, proving ROI to stakeholders. I got 3 offers in 6 weeks."
+                </div>
+                <div class="testimonial-author">— Sarah M., Former Teacher → SDR at SaaS Startup</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pricing">
+        <div class="container">
+            <h2 class="section-title">Choose Your Path</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Self-Service</h3>
+                    <div class="price">Free</div>
+                    <ul>
+                        <li>AI-powered narrative builder</li>
+                        <li>Experience translation guide</li>
+                        <li>Basic interview responses</li>
+                        <li>SaaS sales vocabulary primer</li>
+                    </ul>
+                    <a href="tool.html" class="cta-button" style="margin-top: 20px; padding: 15px 35px; font-size: 1em;">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Interview Ready</h3>
+                    <div class="price">$397</div>
+                    <ul>
+                        <li>Everything in Self-Service</li>
+                        <li>Company-specific interview intel</li>
+                        <li>30-60-90 day plan template</li>
+                        <li>10 most common objections + responses</li>
+                        <li>Email support for 30 days</li>
+                        <li>Bonus: SaaS sales crash course</li>
+                    </ul>
+                    <a href="tool.html" class="cta-button" style="margin-top: 20px; padding: 15px 35px; font-size: 1em;">Coming Soon</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>White Glove</h3>
+                    <div class="price">$1,997</div>
+                    <ul>
+                        <li>Everything in Interview Ready</li>
+                        <li>3 x 60-min coaching sessions</li>
+                        <li>Mock interviews with feedback</li>
+                        <li>Personalized strategy session</li>
+                        <li>30 days of accountability check-ins</li>
+                        <li>Guarantee: Land interviews or money back</li>
+                    </ul>
+                    <a href="tool.html" class="cta-button" style="margin-top: 20px; padding: 15px 35px; font-size: 1em;">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="final-cta">
+        <h2>Your Software Sales Career Starts Here</h2>
+        <p>Stop apologizing for your background. Start proving why it makes you the perfect candidate.</p>
+        <a href="tool.html" class="cta-button">Launch Free Tool</a>
+        <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">Takes 15 minutes. Get your personalized interview playbook instantly.</p>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Breaking Into SaaS. Built by a former career changer who gets it.</p>
+    </footer>
+</body>
+</html>
